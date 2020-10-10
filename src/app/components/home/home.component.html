@@ -1,0 +1,26 @@
+<div class="main">
+    <h1>FOODS</h1>
+    <ul class="cards">
+      <li class="cards_item"  *ngFor="let food of foods | paginate: { itemsPerPage: 3, currentPage: p }">
+        <div class="card">
+          <div class="card_image"><img width="100%" height="230px" src="{{food.strCategoryThumb}}"></div>
+          <div class="card_content">
+            <h2 class="card_title"> {{food.strCategory}}</h2>
+            <p class="card_text">{{food.strCategoryDescription| slice:0:200}} <span
+                *ngIf="food.strCategoryDescription.length>200">...</span></p>
+            <ul class="social-icons">
+                <li><a href="https://www.instagram.com/bynogame/?hl=tr"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/bynogame?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i
+                            class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/bynogame/"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.facebook.com/bynogame"><i class="fa fa-facebook"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <h3 class="made_by">
+    <pagination-controls responsive="true" (pageChange)="p = $event">
+    </pagination-controls>
+  </h3>
