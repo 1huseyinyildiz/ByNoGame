@@ -14,3 +14,8 @@ npm install -> komutu çalıştırılmalıdır
 
 Adım-3: localhost'u ayağa kaldırmak için :
 ng serve --open
+
+Adım-4: Gulp Kullanımı için aşağıdaki kod çalıştırılır
+gulp default
+
+
